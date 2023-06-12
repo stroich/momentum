@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <audio class="songs" src="assets/sounds/No Roots.mp3"></audio>
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+        <div class="sound-control">
+          <button class="sound player-icon"></button>
+          <div class="sound-volume-container">
+            <div class="sound-volume"></div>
+          </div>
+        </div>       
+          
+      
+      </div>
+      <div class="progress">
+        <div class="name-song"></div>
+        <div class="duration-player">
+          <div class="player-progress"></div>
+        </div>
+        <div class="duration-time">00:00/00:00</div>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" value="Minsk" >
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name">
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="settings"> 
+      <div class="container-burger">
+        <svg class="burger" data-name="Слой 1" id="Слой_1" viewBox="0 0 128 128"  xmlns="http://www.w3.org/2000/svg"><title/><path d="M64,128a64,64,0,1,1,64-64A64.07,64.07,0,0,1,64,128ZM64,4a60,60,0,1,0,60,60A60.07,60.07,0,0,0,64,4Z"/><path d="M95,44H33a2,2,0,0,1,0-4H95a2,2,0,0,1,0,4Z"/><path d="M95,66H33a2,2,0,0,1,0-4H95a2,2,0,0,1,0,4Z"/><path d="M95,88H33a2,2,0,0,1,0-4H95a2,2,0,0,1,0,4Z"/></svg>
+      </div>   
+      <div class="container-settings">
+        <div class="settings-element-title">
+          <p class=" title-setting title-translation"></p>
+          <p class=" title-setting title-photo"></p>
+          <p class=" title-setting title-visibility"></p>
+        </div>
+        <div class="settings-element-text">
+          <div class="container-element-burger" id='translation'>
+            <button class="language language-en">English</button>
+            <button class="language language-ru">Russian</button>
+            <div class="back">
+              <svg id="left-arrow-backward-sign" style="enable-background:new 0 0 15.699 8.707;" version="1.1" viewBox="0 0 15.699 8.707" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="15.699,3.854 1.914,3.854 5.061,0.707 4.354,0 0,4.354 4.354,8.707 5.061,8 1.914,4.854 15.699,4.854 "/></svg>
+            </div>
+          </div>
+          <div class="container-element-burger" id ='photo'>
+            <div class="container-photo">
+              <input type="text" class="tag-photo tag-unsplash">
+              <button class="photo photo-unsplash">Unsplash API</button>
+            </div>
+            <div class="container-photo">
+              <input type="text" class="tag-photo tag-flickr">
+              <button class="photo photo-flickr">Flickr API</button>
+            </div>            
+            <button class=" photo photo-git">GitHub</button>
+            <div class="back">
+              <svg id="left-arrow-backward-sign" style="enable-background:new 0 0 15.699 8.707;" version="1.1" viewBox="0 0 15.699 8.707" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="15.699,3.854 1.914,3.854 5.061,0.707 4.354,0 0,4.354 4.354,8.707 5.061,8 1.914,4.854 15.699,4.854 "/></svg>
+            </div>
+          </div>
+          <div class="container-element-burger" id ='visibility'>
+            <form class="blocks">
+              <div class="row">
+                <div class="block">
+                  <input type="checkbox" class="visibility-checkbox" id="todolist">
+                  <label class="checkbox" for="todolist">
+                  </label>
+                </div> 
+                <div class="block">
+                  <input type="checkbox" class="visibility-checkbox" id="date">
+                  <label class="checkbox" for="date">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="block">
+                  <input type="checkbox" class="visibility-checkbox" id="greeting">
+                  <label class="checkbox" for="greeting">
+                  </label>
+                </div>
+                <div class="block">
+                  <input type="checkbox" class="visibility-checkbox" id="quote">
+                  <label class="checkbox" for="quote">                
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="block">
+                  <input type="checkbox" class="visibility-checkbox" id="weather">
+                  <label class="checkbox" for="weather">
+                  </label>
+                </div>
+                <div class="block">
+                  <input type="checkbox" class="visibility-checkbox" id="audio">
+                  <label class="checkbox" for="audio">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="block">
+                  <input type="checkbox" class="visibility-checkbox" id="time">
+                  <label class="checkbox" for="time">
+                  </label>
+                </div>
+                
+              </div>           
+              
+            </form>
+            <div class="back">
+              <svg id="left-arrow-backward-sign" style="enable-background:new 0 0 15.699 8.707;" version="1.1" viewBox="0 0 15.699 8.707" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="15.699,3.854 1.914,3.854 5.061,0.707 4.354,0 0,4.354 4.354,8.707 5.061,8 1.914,4.854 15.699,4.854 "/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>    
+    <div class= "container-quote">
+      <button class="change-quote"></button>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+    <div class="container-todolist">
+      <div class="todolist">
+        <h3 class="todolist-title"></h3>
+        <div class="list">
+          <div class="list-none">
+            <p class="list-none-text"></p>
+          </div>
+          <div class="list-available">
+            
+          </div>
+        </div>
+        <form class="todolist-form">
+          <input type="text" class="todolist-form-input">
+          <button type="submit" class="todolist-form-button"></button>        
+        </form>
+  
+      </div>
+    </div>
+    
+
+  </footer>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
